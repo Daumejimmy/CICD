@@ -10,7 +10,7 @@ jobs:
     environment: "${{ inputs.environment }}"
     runs-on: ubuntu-latest
     env:
-      PORT: 3000
+      PORT: ${{vars.PORT}}
       MONGODB_CLUSTER_ADDRESS: ${{ vars.MONGODB_CLUSTER_ADDRESS }}
       MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
       MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
